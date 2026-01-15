@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Product</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif}
+    html,body{height:100%}
+    body{background:#f4f6fa;display:flex;flex-direction:column}
+
+    /* NAVBAR */
+    nav{
+      background:#0b4aa6;
+      padding:18px 30px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      border-bottom:2px solid rgba(0,0,0,0.15);
+    }
+    .logo-box{
+      width:60px;height:60px;
+      background:#e9e9e9;
+      border:2px solid #ffffff;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .logo-box img{max-width:100%;max-height:100%;display:block}
+    .nav-links{list-style:none;display:flex;gap:24px}
+    .nav-links a{color:#fff;text-decoration:none;font-size:14px}
+    .nav-links a:hover{text-decoration:underline}
+
+    /* PAGE */
+    main{
+      width:min(1200px,95%);
+      margin:0 auto;
+      padding:40px 0 60px;
+      flex:1;
+    }
+    h1{
+      text-align:center;
+      font-size:34px;
+      margin:25px 0 35px;
+      color:#111;
+      font-weight:normal;
+    }
+
+    /* PRODUCTS GRID */
+    .products-grid{
+      display:grid;
+      grid-template-columns:repeat(3, 1fr);
+      gap:55px;
+      align-items:start;
+      justify-items:center;
+    }
+
+    .product-card{
+      width:290px;
+      text-align:center;
+    }
+
+    .img-box{
+      width:100%;
+      height:150px;
+      background:#f0f0f0;
+      border-radius:12px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .img-box img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .product-name{
+      font-size:12px;
+      margin:12px 0 12px;
+      color:#111;
+      font-weight:bold;
+      line-height:1.2;
+    }
+
+    .product-text{
+      font-size:14px;
+      line-height:1.7;
+      color:#444;
+      text-align:left;
+      padding:0 10px;
+    }
+
+    /* FOOTER */
+    footer{
+      background:#0b4aa6;
+      color:#fff;
+      padding:12px 18px;
+      margin-top:auto;
+    }
+    .footer-row{
+      width:min(1200px,95%);
+      margin:0 auto;
+      display:flex;
+      align-items:center;
+      justify-content:flex-start;
+      gap:12px;
+      font-size:12px;
+    }
+    .social a{
+      color:#fff;
+      text-decoration:none;
+      margin-right:8px;
+      font-size:18px;
+    }
+    .social a:hover{color:#cfe6ff}
+
+    /* MOBILE */
+    @media (max-width: 950px){
+      .products-grid{grid-template-columns:1fr; gap:30px;}
+      .product-card{width:min(340px, 92%);}
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav>
+    <div class="logo-box">
+      <img src="assets/kitlogo.png" alt="Logo">
+    </div>
+
+    <ul class="nav-links">
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="team.html">Team</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="product.html">Product</a></li>
+      <li><a href="help.html">Help</a></li>
+    </ul>
+  </nav>
+
+  <!-- CONTENT -->
+  <main>
+    <h1>Products</h1>
+
+    <div class="products-grid">
+
+      <!-- Product 1 -->
+      <div class="product-card">
+        <div class="img-box">
+          <!-- replace with your own image if you want -->
+          <img src="assets/footballkit.png" alt="Custom Football Kits" onerror="this.style.display='none'">
+        </div>
+        <div class="product-name">Custom Football<br>Kits</div>
+        <div class="product-text">
+          Our custom football kits are designed for comfort, durability, and performance.
+          Choose your colours, crest, sponsor layout and player printing to create a
+          professional kit that represents your club on match day.
+        </div>
+      </div>
+
+      <!-- Product 2 -->
+      <div class="product-card">
+        <div class="img-box">
+          <img src="assets/basketballkit.png" alt="Custom Basketball Kits" onerror="this.style.display='none'">
+        </div>
+        <div class="product-name">Custom<br>Basketball Kits</div>
+        <div class="product-text">
+          Built for movement and breathability, our basketball kits support fast-paced play.
+          We design clean, modern styles with bold colours and sharp details to help your
+          team stand out on court.
+        </div>
+      </div>
+
+      <!-- Product 3 -->
+      <div class="product-card">
+        <div class="img-box">
+          <img src="assets/rugbykit.png" alt="Custom Rugby Kits" onerror="this.style.display='none'">
+        </div>
+        <div class="product-name">Custom Rugby<br>Kits</div>
+        <div class="product-text">
+          Our rugby kits are made with tough, match-ready materials built to handle contact.
+          We keep designs sharp and professional while ensuring comfort and long-lasting
+          quality throughout the season.
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-row">
+      <span>Reach out to us on:</span>
+      <div class="social">
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

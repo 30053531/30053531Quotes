@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Team</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial, Helvetica, sans-serif;
+    }
+
+    html, body{
+      height:100%;
+    }
+
+    body{
+      background:#f4f6fa;
+      display:flex;
+      flex-direction:column;
+    }
+
+    /* NAVBAR */
+    nav{
+      background:#0b4aa6;
+      padding:18px 30px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      border-bottom:2px solid rgba(0,0,0,0.15);
+    }
+
+    .logo-box{
+      width:60px;
+      height:60px;
+      background:#e9e9e9;
+      border:2px solid #ffffff;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+
+    .logo-box img{
+      max-width:100%;
+      max-height:100%;
+      display:block;
+    }
+
+    .nav-links{
+      list-style:none;
+      display:flex;
+      gap:24px;
+    }
+
+    .nav-links a{
+      color:#fff;
+      text-decoration:none;
+      font-size:14px;
+    }
+
+    .nav-links a:hover{
+      text-decoration:underline;
+    }
+
+    /* PAGE CONTENT */
+    main{
+      width:min(1250px,95%);
+      margin:0 auto;
+      padding:40px 0 60px;
+      flex:1;
+    }
+
+    h1{
+      text-align:center;
+      font-size:34px;
+      margin:22px 0 35px;
+      color:#111;
+      font-weight:normal;
+    }
+
+    /* TEAM GRID */
+    .team-grid{
+      display:grid;
+      grid-template-columns:repeat(4, 1fr);
+      gap:40px;
+      justify-items:center;
+      align-items:start;
+    }
+
+    /* slimmer cards (images stay separate) */
+    .member-card{
+      width:230px;
+      text-align:center;
+    }
+
+    /* taller image boxes */
+    .img-box{
+      width:100%;
+      height:180px;
+      background:#e6e6e6;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+      border-radius:4px;
+    }
+
+    .img-box img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .member-name{
+      font-size:12px;
+      margin:12px 0 0;
+      color:#222;
+      font-weight:bold;
+      letter-spacing:0.3px;
+    }
+
+    /* FULL-WIDTH TEXT UNDER ALL 4 IMAGES */
+    .team-description{
+      grid-column: 1 / -1;   /* spans all columns */
+      margin-top: 10px;
+      padding: 0 20px;
+      color:#444;
+      font-size:25px;
+      line-height:1.7;
+      text-align:left;
+    }
+
+    .team-description p{
+      margin-top: 20px;
+    }
+
+    /* FOOTER */
+    footer{
+      background:#0b4aa6;
+      color:#fff;
+      padding:12px 18px;
+      margin-top:auto;
+    }
+
+    .footer-row{
+      width:min(1250px,95%);
+      margin:0 auto;
+      display:flex;
+      align-items:center;
+      gap:12px;
+      font-size:12px;
+    }
+
+    .social a{
+      color:#fff;
+      text-decoration:none;
+      margin-right:8px;
+      font-size:18px;
+    }
+
+    .social a:hover{
+      color:#cfe6ff;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width:1100px){
+      .team-grid{
+        grid-template-columns:repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width:600px){
+      .team-grid{
+        grid-template-columns:1fr;
+      }
+
+      .member-card{
+        width:min(320px, 90%);
+      }
+
+      .team-description{
+        padding: 0 10px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav>
+    <div class="logo-box">
+      <img src="assets/kitlogo.png" alt="Logo">
+    </div>
+
+    <ul class="nav-links">
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="team.html">Team</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="product.html">Product</a></li>
+      <li><a href="help.html">Help</a></li>
+    </ul>
+  </nav>
+
+  <!-- MAIN CONTENT -->
+  <main>
+    <h1>Meet Our Team</h1>
+
+    <div class="team-grid">
+
+      <!-- 4 separate image cards -->
+      <div class="member-card">
+        <div class="img-box">
+          <img src="assets/guy1.png" alt="Team Member">
+        </div>
+        <div class="member-name">Social Media</div>
+      </div>
+
+      <div class="member-card">
+        <div class="img-box">
+          <img src="assets/guy2.png" alt="Team Member">
+        </div>
+        <div class="member-name">Design Team</div>
+      </div>
+
+      <div class="member-card">
+        <div class="img-box">
+          <img src="assets/guy3.png" alt="Team Member">
+        </div>
+        <div class="member-name">Production</div>
+      </div>
+
+      <div class="member-card">
+        <div class="img-box">
+          <img src="assets/guy4.png" alt="Team Member">
+        </div>
+        <div class="member-name">Support</div>
+      </div>
+
+      <!-- one text block spanning the full width -->
+      <div class="team-description">
+        <p>
+          Our team is made up of dedicated roles that work closely together to deliver high-quality custom sports kits. The Social Media team manages our online presence by showcasing designs, sharing updates and engaging with teams and supporters across platforms. The Design Team focuses on creating modern, eye-catching kit designs that reflect each club’s identity through colour choices, patterns and branding. Production is responsible for turning these designs into finished products, ensuring every kit meets high standards of quality, comfort and durability. Our Support team works directly with customers helping with enquiries, sizing orders and delivery ensuring a smooth and reliable experience from the first contact to the final delivery.
+        </p>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-row">
+      <span>Reach out to us on:</span>
+      <div class="social">
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
+

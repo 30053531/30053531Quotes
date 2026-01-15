@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif}
+    html,body{height:100%}
+    body{background:#f4f6fa;display:flex;flex-direction:column}
+
+    /* NAVBAR */
+    nav{
+      background:#0b4aa6;
+      padding:18px 30px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      border-bottom:2px solid rgba(0,0,0,0.15);
+    }
+    .logo-box{
+      width:60px;height:60px;
+      background:#e9e9e9;
+      border:2px solid #ffffff;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .logo-box img{max-width:100%;max-height:100%;display:block}
+
+    .nav-links{list-style:none;display:flex;gap:24px}
+    .nav-links a{color:#fff;text-decoration:none;font-size:14px}
+    .nav-links a:hover{text-decoration:underline}
+
+    /* PAGE */
+    main{
+      width:min(1200px,95%);
+      margin:0 auto;
+      padding:40px 0 60px;
+      flex:1;
+    }
+    h1{
+      text-align:center;
+      font-size:34px;
+      margin:25px 0 35px;
+      color:#111;
+    }
+
+    /* SERVICES GRID */
+    .services-grid{
+      display:grid;
+      grid-template-columns:repeat(3, 1fr);
+      gap:50px;
+      align-items:start;
+      justify-items:center;
+    }
+
+    .service-card{
+      width:270px;
+      text-align:center;
+    }
+
+    .img-box{
+      width:100%;
+      height:150px;
+      background:#f0f0f0;
+      border-radius:12px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+
+    /* If you use real images, they will fill the box */
+    .img-box img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .service-name{
+      font-size:13px;
+      margin:10px 0 14px;
+      color:#333;
+    }
+
+    /* Fake text lines like the mockup */
+    .lines{padding:0 10px}
+    .line{
+      height:6px;
+      background:#9b9b9b;
+      border-radius:4px;
+      margin:9px 0;
+      opacity:.9;
+    }
+    .line.short{width:65%}
+    .line.med{width:82%}
+    .line.long{width:100%}
+
+    /* FOOTER */
+    footer{
+      background:#0b4aa6;
+      color:#fff;
+      padding:12px 18px;
+      margin-top:auto;
+    }
+    .footer-row{
+      width:min(1200px,95%);
+      margin:0 auto;
+      display:flex;
+      align-items:center;
+      justify-content:flex-start;
+      gap:12px;
+      font-size:12px;
+    }
+    .social a{
+      color:#fff;
+      text-decoration:none;
+      margin-right:8px;
+      font-size:18px;
+    }
+    .social a:hover{color:#cfe6ff}
+
+    /* Mobile */
+    @media (max-width: 950px){
+      .services-grid{grid-template-columns:1fr; gap:30px;}
+      .service-card{width:min(320px, 90%);}
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav>
+    <div class="logo-box">
+      <img src="assets/jerseys.png" alt="Logo">
+    </div>
+
+    <ul class="nav-links">
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="team.html">Team</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="product.html">Product</a></li>
+      <li><a href="help.html">Help</a></li>
+    </ul>
+  </nav>
+
+  <!-- CONTENT -->
+  <main>
+    <h1>Services Offered</h1>
+
+    <div class="services-grid">
+
+      <!-- Card 1 -->
+      <div class="service-card">
+        <div class="img-box">
+          <!-- If you have an image, use it like: <img src="assets/jerseys.jpg" alt="Jerseys"> -->
+          <img src="assets/jerserys.png" alt="Jerseys" onerror="this.style.display='none'">
+        </div>
+        <div class="service-name">Jerseys</div>
+
+        <div class="service-name">Custom Jerseys</div>
+
+<p class="service-text">
+  Our custom jerseys are designed for comfort, durability and performance. Using high-quality, breathable fabrics each jersey is tailored to your team’s colours, crest, sponsors and player details, ensuring a professional look on match day while allowing players to perform at their best.
+</p>
+
+      </div>
+
+      <!-- Card 2 -->
+      <div class="service-card">
+        <div class="img-box">
+          <img src="assets/shorts.png" alt="Shorts" onerror="this.style.display='none'">
+        </div>
+        <div class="service-name">Shorts</div>
+
+        <div class="service-name">Custom Jerseys</div>
+
+<p class="service-text">
+  Our match shorts are built for movement and comfort, combining lightweight materials with a secure athletic fit. Designed to complement your team’s jersey, they offer durability and flexibility for training sessions and competitive matches alike.
+</p>
+
+      </div>
+
+      <!-- Card 3 -->
+      <div class="service-card">
+        <div class="img-box">
+          <img src="assets/socks.png" alt="Socks" onerror="this.style.display='none'">
+        </div>
+        <div class="service-name">Socks</div>
+
+        <div class="service-name">Custom Jerseys</div>
+
+<p class="service-text">
+  Our sports socks are designed to provide support, comfort and long-lasting wear. With reinforced areas and breathable fabric they complete your kit while ensuring players stay comfortable and focused throughout the game.
+</p>
+
+      </div>
+
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-row">
+      <span>Reach out to us on:</span>
+      <div class="social">
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
+

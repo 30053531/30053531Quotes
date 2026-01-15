@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About</title>
+
+  <!-- Icons (Instagram, TikTok, Facebook) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, Helvetica, sans-serif; }
+
+    html, body { height: 100%; }
+    body { background: #f4f6fa; color: #222; display: flex; flex-direction: column; }
+
+    /* NAVBAR */
+    nav{
+      background:#0b4aa6;              /* blue like mockup */
+      padding: 18px 30px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      border-bottom: 2px solid rgba(0,0,0,0.15);
+    }
+
+    .nav-left{
+      display:flex;
+      align-items:center;
+      gap: 14px;
+    }
+
+    .logo-box{
+      width: 60px;
+      height: 60px;
+      background: #e9e9e9;
+      border: 2px solid #ffffff;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+
+    .logo-box img{
+      max-width: 100%;
+      max-height: 100%;
+      display:block;
+    }
+
+    .nav-links{
+      list-style:none;
+      display:flex;
+      gap: 24px;
+    }
+
+    .nav-links a{
+      color:#fff;
+      text-decoration:none;
+      font-size: 14px;
+    }
+
+    .nav-links a:hover{
+      text-decoration: underline;
+    }
+
+    /* PAGE LAYOUT */
+    main{
+      width: min(1200px, 95%);
+      margin: 0 auto;
+      padding: 28px 0 40px;
+      flex: 1; /* lets footer sit at bottom */
+    }
+
+    .layout{
+      display:grid;
+      grid-template-columns: 260px 1fr 320px;
+      gap: 26px;
+      align-items:start;
+    }
+
+    /* LEFT (MAP) */
+    .map-card img{
+      width: 100%;
+      display:block;
+      border: 1px solid #cfcfcf;
+      background: #fff;
+    }
+
+    .caption{
+      width: fit-content;
+      margin: 10px auto 0;
+      padding: 6px 10px;
+      border: 1px solid #777;
+      background: #fff;
+      font-size: 12px;
+    }
+
+    /* MIDDLE (ABOUT + PRODUCT IMAGE + TEXT) */
+    .center h1{
+      text-align:center;
+      font-size: 32px;
+      margin-bottom: 18px;
+      color:#111;
+    }
+
+    .product-img{
+      width: 100%;
+      height: 220px;                  /* controls the box height */
+      object-fit: cover;
+      border-radius: 4px;
+      border: 1px solid #d2d2d2;
+      display:block;
+      background:#eaeaea;
+      margin: 0 auto 16px;
+    }
+
+    .text-block{
+      background: transparent;
+      padding: 0 10px;
+      color:#333;
+      line-height: 1.6;
+      font-size: 14px;
+    }
+
+    /* RIGHT (TEAM PHOTO + TEXT) */
+    .right{
+      padding-top: 48px; /* makes it sit a bit lower like mockup */
+    }
+
+    .team-card{
+      background: #f0f0f0;
+      border-radius: 12px;
+      padding: 18px;
+    }
+
+    .team-photo{
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 10px;
+      display:block;
+      background:#e0e0e0;
+      border: 0;
+    }
+
+    .team-label{
+      text-align:center;
+      font-size: 12px;
+      margin-top: 10px;
+      color:#333;
+    }
+
+    .right-text{
+      margin-top: 14px;
+      line-height: 1.6;
+      font-size: 14px;
+      padding: 0 6px;
+      color:#333;
+    }
+
+    /* FOOTER */
+    footer{
+      background:#0b4aa6;
+      color:#fff;
+      padding: 12px 18px;
+    }
+
+    .footer-row{
+      width: min(1200px, 95%);
+      margin: 0 auto;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap: 12px;
+    }
+
+    .footer-left{
+      display:flex;
+      align-items:center;
+      gap: 10px;
+      font-size: 12px;
+    }
+
+    .social a{
+      color:#fff;
+      text-decoration:none;
+      margin-right: 8px;
+      font-size: 18px;
+    }
+
+    .social a:hover{ color:#cfe6ff; }
+
+    /* Small screens */
+    @media (max-width: 900px){
+      .layout{
+        grid-template-columns: 1fr;
+      }
+      .right{ padding-top: 0; }
+      .center h1{ text-align:left; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-left">
+      <div class="logo-box">
+        <!-- Replace with your logo -->
+        <img src="assets/kitlogo.png" alt="Logo">
+      </div>
+    </div>
+
+    <ul class="nav-links">
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="team.html">Team</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="product.html">Product</a></li>
+      <li><a href="help.html">Help</a></li>
+    </ul>
+  </nav>
+
+  <!-- CONTENT -->
+  <main>
+    <div class="layout">
+
+      <!-- LEFT: MAP -->
+      <div class="map-card">
+        <!-- Replace with your map image -->
+          <div class="caption">Where we are located</div>
+        <img src="assets/location.png" alt="Map">
+      </div>
+       <div class="text-block">
+          <p>
+           We are based in Limavady Main Street, Limavady, County Londonderry, BT49 0EX
+
+      <!-- CENTER: ABOUT -->
+      <div class="center">
+        <h1>About</h1>
+
+        <!-- Replace with your product image -->
+        <img class="product-img" src="assets/sportshirts.png" alt="Photo of Some products">
+
+        <div class="text-block">
+          <p>
+            We create custom sports kits that combine comfort, performance and a modern look.
+            We work with teams and clubs to bring their identity to life through colour, badges, sponsors
+            and clean design.
+          </p>
+          <p style="margin-top:10px;">
+            From first draft to final print, we focus on quality materials and detail so your team looks
+            professional on and off the pitch.
+          </p>
+        </div>
+      </div>
+
+      <!-- RIGHT: TEAM -->
+      <div class="right">
+        <div class="team-card">
+          <!-- Replace with your team photo -->
+          <img class="team-photo" src="assets/basketball.png" alt="Photo of the team">
+          <div class="team-label">Some of our work.</div>
+        </div>
+
+        <div class="right-text">
+          <p>
+            Our team handles design, printing, and order support. We help you choose the best layout
+            for your crest, sponsors, and player details—so everything looks sharp and consistent.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-row">
+      <div class="footer-left">
+        <span>Reach out to us on:</span>
+        <div class="social">
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+        </div>
+      </div>
+
+      <div style="font-size:12px;">© 2026 Thanks for visiting!</div>
+    </div>
+  </footer>
+
+</body>
+</html>
